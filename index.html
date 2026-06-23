@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <h1 class="brand">Weather App</h1>
+      <form id="search-form" class="search" role="search">
+        <input type="text" id="city-input" placeholder="Search city..." />
+        <button type="submit">Search</button>
+      </form>
+    </header>
+
+    <main class="container">
+      <div id="loading" class="loading" hidden>Loading...</div>
+      <div id="error" class="error" hidden></div>
+
+      <section id="hero" class="hero" hidden>
+        <div id="hero-icon" class="hero-icon"></div>
+        <h2 id="city" class="city"></h2>
+        <div id="temp" class="temp"></div>
+        <div id="desc" class="desc"></div>
+      </section>
+
+      <section id="stats" class="stats" hidden>
+        <div class="stat">
+          <div class="stat-label">Humidity</div>
+          <div id="humidity" class="stat-value">—</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Wind Speed</div>
+          <div id="wind" class="stat-value">—</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">UV Index</div>
+          <div id="uv" class="stat-value">—</div>
+        </div>
+      </section>
+
+      <section id="forecast-section" class="forecast" hidden>
+        <h3 class="forecast-title">5-Day Forecast</h3>
+        <div id="forecast"></div>
+      </section>
+    </main>
+  </body>
+</html>
